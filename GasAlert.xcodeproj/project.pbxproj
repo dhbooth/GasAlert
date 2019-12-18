@@ -27,6 +27,8 @@
 		70B16C7323A8E844000CE6EE /* StarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B16C7123A8E844000CE6EE /* StarCell.swift */; };
 		70B16C7423A8E844000CE6EE /* StarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70B16C7223A8E844000CE6EE /* StarCell.xib */; };
 		70B16C7623A9FEC6000CE6EE /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B16C7523A9FEC6000CE6EE /* Map.swift */; };
+		70F8D99723AA071900983545 /* gmap-style.json in Resources */ = {isa = PBXBuildFile; fileRef = 70F8D99623AA071900983545 /* gmap-style.json */; };
+		70F8D99923AA26D200983545 /* PopupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70F8D99823AA26D200983545 /* PopupView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -75,6 +77,8 @@
 		70B16C7123A8E844000CE6EE /* StarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarCell.swift; sourceTree = "<group>"; };
 		70B16C7223A8E844000CE6EE /* StarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarCell.xib; sourceTree = "<group>"; };
 		70B16C7523A9FEC6000CE6EE /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		70F8D99623AA071900983545 /* gmap-style.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "gmap-style.json"; sourceTree = "<group>"; };
+		70F8D99823AA26D200983545 /* PopupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopupView.swift; sourceTree = "<group>"; };
 		7EA81B0E51A66C3BA5C59AA3 /* Pods_GasAlertTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GasAlertTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8DD5D5015FA26724834979C /* Pods-GasAlertTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasAlertTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GasAlertTests/Pods-GasAlertTests.debug.xcconfig"; sourceTree = "<group>"; };
 		BB250676ED1339EDDA41033E /* Pods-GasAlert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasAlert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GasAlert/Pods-GasAlert.debug.xcconfig"; sourceTree = "<group>"; };
@@ -143,6 +147,7 @@
 				70523C8623A8CE4800A33198 /* Info.plist */,
 				70B16C6923A8DB8D000CE6EE /* PLists */,
 				70523C8123A8CE4800A33198 /* Assets.xcassets */,
+				70F8D99623AA071900983545 /* gmap-style.json */,
 			);
 			path = GasAlert;
 			sourceTree = "<group>";
@@ -187,6 +192,7 @@
 			children = (
 				70B16C6A23A8DC56000CE6EE /* Home.swift */,
 				70B16C7523A9FEC6000CE6EE /* Map.swift */,
+				70F8D99823AA26D200983545 /* PopupView.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -366,6 +372,7 @@
 				70B16C7423A8E844000CE6EE /* StarCell.xib in Resources */,
 				70523C8023A8CE4400A33198 /* Main.storyboard in Resources */,
 				70B16C7023A8DEFE000CE6EE /* HomeCell.xib in Resources */,
+				70F8D99723AA071900983545 /* gmap-style.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -494,6 +501,7 @@
 				70B16C5C23A8D1DE000CE6EE /* Restaurant.swift in Sources */,
 				70B16C6F23A8DEFE000CE6EE /* HomeCell.swift in Sources */,
 				70B16C5E23A8D1E9000CE6EE /* Deal.swift in Sources */,
+				70F8D99923AA26D200983545 /* PopupView.swift in Sources */,
 				70B16C7323A8E844000CE6EE /* StarCell.swift in Sources */,
 				70523C7923A8CE4300A33198 /* AppDelegate.swift in Sources */,
 				70B16C6123A8D37F000CE6EE /* Server.swift in Sources */,

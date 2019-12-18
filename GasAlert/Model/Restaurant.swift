@@ -13,8 +13,8 @@ class Restaurant {
     var name: String?
     var address: String?
     var food_type: String?
-    var latitude: Float?
-    var longitude: Float?
+    var latitude: Double?
+    var longitude: Double?
     var deals: [String]?
     var user_rating: Double?
     var price_rating: Int?
@@ -27,8 +27,8 @@ class Restaurant {
             self.name = value["name"] as? String ?? ""
             self.address = value["address"] as? String ?? ""
             self.food_type = value["food_type"] as? String ?? ""
-            self.latitude = value["latitude"] as? Float ?? 0.0
-            self.longitude = value["longitude"] as? Float ?? 0.0
+            self.latitude = value["latitude"] as? Double ?? 0.0
+            self.longitude = value["longitude"] as? Double ?? 0.0
             self.deals = value["deals"] as? [String] ?? [String]()
             self.user_rating = value["user_rating"] as? Double ?? 0.0
             self.price_rating = value["price_rating"] as? Int ?? 0

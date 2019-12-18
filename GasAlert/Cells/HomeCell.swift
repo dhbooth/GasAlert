@@ -66,8 +66,7 @@ class HomeCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionVi
     
     func fullInit(_ dealID: String) {
         self.myDeal = Deal(dealID: dealID, parent: self)
-        print("Deal ID: ", dealID)
-        
+        self.numLikes.text = String(Int.random(in: 0..<98))
     }
 
 }

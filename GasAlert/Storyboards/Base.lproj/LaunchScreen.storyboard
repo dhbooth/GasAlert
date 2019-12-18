@@ -14,7 +14,20 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GasAlert" translatesAutoresizingMaskIntoConstraints="NO" id="Ehu-C3-n05">
+                                <rect key="frame" x="62" y="308" width="290" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ehu-C3-n05" secondAttribute="height" multiplier="1:1" id="Xt0-GU-d3x"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Ehu-C3-n05" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="Xvw-Hh-PFc"/>
+                            <constraint firstItem="Ehu-C3-n05" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="aSx-Ed-8sU"/>
+                            <constraint firstItem="Ehu-C3-n05" firstAttribute="width" secondItem="Ze5-6b-2t3" secondAttribute="width" multiplier="0.7" id="oUF-I6-9ek"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
@@ -23,4 +36,7 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="GasAlert" width="947" height="703"/>
+    </resources>
 </document>

@@ -88,7 +88,7 @@ extension Home {
     //}
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        // TODO
+        self.performSegue(withIdentifier: "toDetail", sender: self)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
