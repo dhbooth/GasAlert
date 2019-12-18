@@ -1,0 +1,839 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		1A31596C50A816DFCF80728E /* Pods_GasAlertUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 077D3E34E0C0CB9C3B54BEB1 /* Pods_GasAlertUITests.framework */; };
+		2F1205202120D4957056C1B9 /* Pods_GasAlert.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 25D852230684ECE0CDBAAD5F /* Pods_GasAlert.framework */; };
+		3043FF87432C610642831B7A /* Pods_GasAlertTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EA81B0E51A66C3BA5C59AA3 /* Pods_GasAlertTests.framework */; };
+		70523C7923A8CE4300A33198 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70523C7823A8CE4300A33198 /* AppDelegate.swift */; };
+		70523C7B23A8CE4300A33198 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70523C7A23A8CE4300A33198 /* SceneDelegate.swift */; };
+		70523C8023A8CE4400A33198 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70523C7E23A8CE4400A33198 /* Main.storyboard */; };
+		70523C8223A8CE4800A33198 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 70523C8123A8CE4800A33198 /* Assets.xcassets */; };
+		70523C8523A8CE4800A33198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70523C8323A8CE4800A33198 /* LaunchScreen.storyboard */; };
+		70523C9023A8CE4800A33198 /* GasAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70523C8F23A8CE4800A33198 /* GasAlertTests.swift */; };
+		70523C9B23A8CE4800A33198 /* GasAlertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70523C9A23A8CE4800A33198 /* GasAlertUITests.swift */; };
+		70B16C5C23A8D1DE000CE6EE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B16C5B23A8D1DE000CE6EE /* Restaurant.swift */; };
+		70B16C5E23A8D1E9000CE6EE /* Deal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B16C5D23A8D1E9000CE6EE /* Deal.swift */; };
+		70B16C6123A8D37F000CE6EE /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B16C6023A8D37F000CE6EE /* Server.swift */; };
+		70B16C6323A8D97F000CE6EE /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 70B16C6223A8D97F000CE6EE /* GoogleService-Info.plist */; };
+		70B16C6B23A8DC56000CE6EE /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B16C6A23A8DC56000CE6EE /* Home.swift */; };
+		70B16C6F23A8DEFE000CE6EE /* HomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B16C6D23A8DEFE000CE6EE /* HomeCell.swift */; };
+		70B16C7023A8DEFE000CE6EE /* HomeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70B16C6E23A8DEFE000CE6EE /* HomeCell.xib */; };
+		70B16C7323A8E844000CE6EE /* StarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B16C7123A8E844000CE6EE /* StarCell.swift */; };
+		70B16C7423A8E844000CE6EE /* StarCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 70B16C7223A8E844000CE6EE /* StarCell.xib */; };
+		70B16C7623A9FEC6000CE6EE /* Map.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B16C7523A9FEC6000CE6EE /* Map.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		70523C8C23A8CE4800A33198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70523C6D23A8CE4300A33198 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70523C7423A8CE4300A33198;
+			remoteInfo = GasAlert;
+		};
+		70523C9723A8CE4800A33198 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 70523C6D23A8CE4300A33198 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 70523C7423A8CE4300A33198;
+			remoteInfo = GasAlert;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		077D3E34E0C0CB9C3B54BEB1 /* Pods_GasAlertUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GasAlertUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0860C58692D5A58138AF00AA /* Pods-GasAlertUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasAlertUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GasAlertUITests/Pods-GasAlertUITests.release.xcconfig"; sourceTree = "<group>"; };
+		25D852230684ECE0CDBAAD5F /* Pods_GasAlert.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GasAlert.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2E4A092F82A7DE755035DA55 /* Pods-GasAlert.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasAlert.release.xcconfig"; path = "Pods/Target Support Files/Pods-GasAlert/Pods-GasAlert.release.xcconfig"; sourceTree = "<group>"; };
+		3258AA68FB5D9EDD3D3FCFE0 /* Pods-GasAlertTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasAlertTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-GasAlertTests/Pods-GasAlertTests.release.xcconfig"; sourceTree = "<group>"; };
+		70523C7523A8CE4300A33198 /* GasAlert.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GasAlert.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70523C7823A8CE4300A33198 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		70523C7A23A8CE4300A33198 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		70523C7F23A8CE4400A33198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		70523C8123A8CE4800A33198 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		70523C8423A8CE4800A33198 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		70523C8623A8CE4800A33198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70523C8B23A8CE4800A33198 /* GasAlertTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasAlertTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70523C8F23A8CE4800A33198 /* GasAlertTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasAlertTests.swift; sourceTree = "<group>"; };
+		70523C9123A8CE4800A33198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70523C9623A8CE4800A33198 /* GasAlertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasAlertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		70523C9A23A8CE4800A33198 /* GasAlertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasAlertUITests.swift; sourceTree = "<group>"; };
+		70523C9C23A8CE4800A33198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		70B16C5B23A8D1DE000CE6EE /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
+		70B16C5D23A8D1E9000CE6EE /* Deal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deal.swift; sourceTree = "<group>"; };
+		70B16C6023A8D37F000CE6EE /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
+		70B16C6223A8D97F000CE6EE /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "GasAlert/PLists/GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
+		70B16C6A23A8DC56000CE6EE /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		70B16C6D23A8DEFE000CE6EE /* HomeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeCell.swift; sourceTree = "<group>"; };
+		70B16C6E23A8DEFE000CE6EE /* HomeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HomeCell.xib; sourceTree = "<group>"; };
+		70B16C7123A8E844000CE6EE /* StarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StarCell.swift; sourceTree = "<group>"; };
+		70B16C7223A8E844000CE6EE /* StarCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = StarCell.xib; sourceTree = "<group>"; };
+		70B16C7523A9FEC6000CE6EE /* Map.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Map.swift; sourceTree = "<group>"; };
+		7EA81B0E51A66C3BA5C59AA3 /* Pods_GasAlertTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GasAlertTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B8DD5D5015FA26724834979C /* Pods-GasAlertTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasAlertTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GasAlertTests/Pods-GasAlertTests.debug.xcconfig"; sourceTree = "<group>"; };
+		BB250676ED1339EDDA41033E /* Pods-GasAlert.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasAlert.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GasAlert/Pods-GasAlert.debug.xcconfig"; sourceTree = "<group>"; };
+		C4F9F575BEFF22EAC5A0ED14 /* Pods-GasAlertUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GasAlertUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-GasAlertUITests/Pods-GasAlertUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		70523C7223A8CE4300A33198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2F1205202120D4957056C1B9 /* Pods_GasAlert.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70523C8823A8CE4800A33198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3043FF87432C610642831B7A /* Pods_GasAlertTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70523C9323A8CE4800A33198 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1A31596C50A816DFCF80728E /* Pods_GasAlertUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		70523C6C23A8CE4300A33198 = {
+			isa = PBXGroup;
+			children = (
+				70523C7723A8CE4300A33198 /* GasAlert */,
+				70523C8E23A8CE4800A33198 /* GasAlertTests */,
+				70523C9923A8CE4800A33198 /* GasAlertUITests */,
+				70523C7623A8CE4300A33198 /* Products */,
+				89159A0A250CD1A9923C9DCF /* Pods */,
+				EBE506C87173068EAAC98427 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		70523C7623A8CE4300A33198 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				70523C7523A8CE4300A33198 /* GasAlert.app */,
+				70523C8B23A8CE4800A33198 /* GasAlertTests.xctest */,
+				70523C9623A8CE4800A33198 /* GasAlertUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		70523C7723A8CE4300A33198 /* GasAlert */ = {
+			isa = PBXGroup;
+			children = (
+				70B16C5F23A8D36E000CE6EE /* Server */,
+				70B16C5A23A8D110000CE6EE /* Model */,
+				70B16C6723A8DB6A000CE6EE /* Launch */,
+				70B16C6423A8DB06000CE6EE /* Controllers */,
+				70B16C6C23A8DEE5000CE6EE /* Cells */,
+				70B16C6823A8DB79000CE6EE /* Storyboards */,
+				70523C8623A8CE4800A33198 /* Info.plist */,
+				70B16C6923A8DB8D000CE6EE /* PLists */,
+				70523C8123A8CE4800A33198 /* Assets.xcassets */,
+			);
+			path = GasAlert;
+			sourceTree = "<group>";
+		};
+		70523C8E23A8CE4800A33198 /* GasAlertTests */ = {
+			isa = PBXGroup;
+			children = (
+				70523C8F23A8CE4800A33198 /* GasAlertTests.swift */,
+				70523C9123A8CE4800A33198 /* Info.plist */,
+			);
+			path = GasAlertTests;
+			sourceTree = "<group>";
+		};
+		70523C9923A8CE4800A33198 /* GasAlertUITests */ = {
+			isa = PBXGroup;
+			children = (
+				70523C9A23A8CE4800A33198 /* GasAlertUITests.swift */,
+				70523C9C23A8CE4800A33198 /* Info.plist */,
+			);
+			path = GasAlertUITests;
+			sourceTree = "<group>";
+		};
+		70B16C5A23A8D110000CE6EE /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				70B16C5B23A8D1DE000CE6EE /* Restaurant.swift */,
+				70B16C5D23A8D1E9000CE6EE /* Deal.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		70B16C5F23A8D36E000CE6EE /* Server */ = {
+			isa = PBXGroup;
+			children = (
+				70B16C6023A8D37F000CE6EE /* Server.swift */,
+			);
+			path = Server;
+			sourceTree = "<group>";
+		};
+		70B16C6423A8DB06000CE6EE /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				70B16C6A23A8DC56000CE6EE /* Home.swift */,
+				70B16C7523A9FEC6000CE6EE /* Map.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		70B16C6723A8DB6A000CE6EE /* Launch */ = {
+			isa = PBXGroup;
+			children = (
+				70523C7A23A8CE4300A33198 /* SceneDelegate.swift */,
+				70523C7823A8CE4300A33198 /* AppDelegate.swift */,
+			);
+			path = Launch;
+			sourceTree = "<group>";
+		};
+		70B16C6823A8DB79000CE6EE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				70523C7E23A8CE4400A33198 /* Main.storyboard */,
+				70523C8323A8CE4800A33198 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		70B16C6923A8DB8D000CE6EE /* PLists */ = {
+			isa = PBXGroup;
+			children = (
+				70B16C6223A8D97F000CE6EE /* GoogleService-Info.plist */,
+			);
+			path = PLists;
+			sourceTree = "<group>";
+		};
+		70B16C6C23A8DEE5000CE6EE /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				70B16C6D23A8DEFE000CE6EE /* HomeCell.swift */,
+				70B16C6E23A8DEFE000CE6EE /* HomeCell.xib */,
+				70B16C7123A8E844000CE6EE /* StarCell.swift */,
+				70B16C7223A8E844000CE6EE /* StarCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		89159A0A250CD1A9923C9DCF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BB250676ED1339EDDA41033E /* Pods-GasAlert.debug.xcconfig */,
+				2E4A092F82A7DE755035DA55 /* Pods-GasAlert.release.xcconfig */,
+				B8DD5D5015FA26724834979C /* Pods-GasAlertTests.debug.xcconfig */,
+				3258AA68FB5D9EDD3D3FCFE0 /* Pods-GasAlertTests.release.xcconfig */,
+				C4F9F575BEFF22EAC5A0ED14 /* Pods-GasAlertUITests.debug.xcconfig */,
+				0860C58692D5A58138AF00AA /* Pods-GasAlertUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		EBE506C87173068EAAC98427 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				25D852230684ECE0CDBAAD5F /* Pods_GasAlert.framework */,
+				7EA81B0E51A66C3BA5C59AA3 /* Pods_GasAlertTests.framework */,
+				077D3E34E0C0CB9C3B54BEB1 /* Pods_GasAlertUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		70523C7423A8CE4300A33198 /* GasAlert */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70523C9F23A8CE4800A33198 /* Build configuration list for PBXNativeTarget "GasAlert" */;
+			buildPhases = (
+				648BE12BDCB1DCC361BFAA1A /* [CP] Check Pods Manifest.lock */,
+				70523C7123A8CE4300A33198 /* Sources */,
+				70523C7223A8CE4300A33198 /* Frameworks */,
+				70523C7323A8CE4300A33198 /* Resources */,
+				3877DD5D4F770B18D3F0D5F9 /* [CP] Embed Pods Frameworks */,
+				9CA6C86C40F04EC1E69434DB /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = GasAlert;
+			productName = GasAlert;
+			productReference = 70523C7523A8CE4300A33198 /* GasAlert.app */;
+			productType = "com.apple.product-type.application";
+		};
+		70523C8A23A8CE4800A33198 /* GasAlertTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70523CA223A8CE4800A33198 /* Build configuration list for PBXNativeTarget "GasAlertTests" */;
+			buildPhases = (
+				D8FBF971A168811AF52CE84D /* [CP] Check Pods Manifest.lock */,
+				70523C8723A8CE4800A33198 /* Sources */,
+				70523C8823A8CE4800A33198 /* Frameworks */,
+				70523C8923A8CE4800A33198 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70523C8D23A8CE4800A33198 /* PBXTargetDependency */,
+			);
+			name = GasAlertTests;
+			productName = GasAlertTests;
+			productReference = 70523C8B23A8CE4800A33198 /* GasAlertTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		70523C9523A8CE4800A33198 /* GasAlertUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 70523CA523A8CE4800A33198 /* Build configuration list for PBXNativeTarget "GasAlertUITests" */;
+			buildPhases = (
+				465D0CBC88F95E8B6930CA84 /* [CP] Check Pods Manifest.lock */,
+				70523C9223A8CE4800A33198 /* Sources */,
+				70523C9323A8CE4800A33198 /* Frameworks */,
+				70523C9423A8CE4800A33198 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				70523C9823A8CE4800A33198 /* PBXTargetDependency */,
+			);
+			name = GasAlertUITests;
+			productName = GasAlertUITests;
+			productReference = 70523C9623A8CE4800A33198 /* GasAlertUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		70523C6D23A8CE4300A33198 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = GasAlert;
+				TargetAttributes = {
+					70523C7423A8CE4300A33198 = {
+						CreatedOnToolsVersion = 11.3;
+					};
+					70523C8A23A8CE4800A33198 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 70523C7423A8CE4300A33198;
+					};
+					70523C9523A8CE4800A33198 = {
+						CreatedOnToolsVersion = 11.3;
+						TestTargetID = 70523C7423A8CE4300A33198;
+					};
+				};
+			};
+			buildConfigurationList = 70523C7023A8CE4300A33198 /* Build configuration list for PBXProject "GasAlert" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 70523C6C23A8CE4300A33198;
+			productRefGroup = 70523C7623A8CE4300A33198 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				70523C7423A8CE4300A33198 /* GasAlert */,
+				70523C8A23A8CE4800A33198 /* GasAlertTests */,
+				70523C9523A8CE4800A33198 /* GasAlertUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		70523C7323A8CE4300A33198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70523C8523A8CE4800A33198 /* LaunchScreen.storyboard in Resources */,
+				70B16C6323A8D97F000CE6EE /* GoogleService-Info.plist in Resources */,
+				70523C8223A8CE4800A33198 /* Assets.xcassets in Resources */,
+				70B16C7423A8E844000CE6EE /* StarCell.xib in Resources */,
+				70523C8023A8CE4400A33198 /* Main.storyboard in Resources */,
+				70B16C7023A8DEFE000CE6EE /* HomeCell.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70523C8923A8CE4800A33198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70523C9423A8CE4800A33198 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		3877DD5D4F770B18D3F0D5F9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GasAlert/Pods-GasAlert-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
+				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
+				"${BUILT_PRODUCTS_DIR}/leveldb-library/leveldb.framework",
+				"${BUILT_PRODUCTS_DIR}/nanopb/nanopb.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/leveldb.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/nanopb.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GasAlert/Pods-GasAlert-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		465D0CBC88F95E8B6930CA84 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GasAlertUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		648BE12BDCB1DCC361BFAA1A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GasAlert-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9CA6C86C40F04EC1E69434DB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-GasAlert/Pods-GasAlert-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+				"${PODS_ROOT}/GooglePlaces/Frameworks/GooglePlaces.framework/Resources/GooglePlaces.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GooglePlaces.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-GasAlert/Pods-GasAlert-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D8FBF971A168811AF52CE84D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GasAlertTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		70523C7123A8CE4300A33198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70B16C5C23A8D1DE000CE6EE /* Restaurant.swift in Sources */,
+				70B16C6F23A8DEFE000CE6EE /* HomeCell.swift in Sources */,
+				70B16C5E23A8D1E9000CE6EE /* Deal.swift in Sources */,
+				70B16C7323A8E844000CE6EE /* StarCell.swift in Sources */,
+				70523C7923A8CE4300A33198 /* AppDelegate.swift in Sources */,
+				70B16C6123A8D37F000CE6EE /* Server.swift in Sources */,
+				70B16C6B23A8DC56000CE6EE /* Home.swift in Sources */,
+				70B16C7623A9FEC6000CE6EE /* Map.swift in Sources */,
+				70523C7B23A8CE4300A33198 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70523C8723A8CE4800A33198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70523C9023A8CE4800A33198 /* GasAlertTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		70523C9223A8CE4800A33198 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				70523C9B23A8CE4800A33198 /* GasAlertUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		70523C8D23A8CE4800A33198 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70523C7423A8CE4300A33198 /* GasAlert */;
+			targetProxy = 70523C8C23A8CE4800A33198 /* PBXContainerItemProxy */;
+		};
+		70523C9823A8CE4800A33198 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 70523C7423A8CE4300A33198 /* GasAlert */;
+			targetProxy = 70523C9723A8CE4800A33198 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		70523C7E23A8CE4400A33198 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70523C7F23A8CE4400A33198 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		70523C8323A8CE4800A33198 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				70523C8423A8CE4800A33198 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		70523C9D23A8CE4800A33198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		70523C9E23A8CE4800A33198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		70523CA023A8CE4800A33198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BB250676ED1339EDDA41033E /* Pods-GasAlert.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TL9BB86JQV;
+				INFOPLIST_FILE = GasAlert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gasalertdev.GasAlert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		70523CA123A8CE4800A33198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 2E4A092F82A7DE755035DA55 /* Pods-GasAlert.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TL9BB86JQV;
+				INFOPLIST_FILE = GasAlert/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gasalertdev.GasAlert;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		70523CA323A8CE4800A33198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8DD5D5015FA26724834979C /* Pods-GasAlertTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TL9BB86JQV;
+				INFOPLIST_FILE = GasAlertTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gasalertdev.GasAlertTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GasAlert.app/GasAlert";
+			};
+			name = Debug;
+		};
+		70523CA423A8CE4800A33198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3258AA68FB5D9EDD3D3FCFE0 /* Pods-GasAlertTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TL9BB86JQV;
+				INFOPLIST_FILE = GasAlertTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gasalertdev.GasAlertTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GasAlert.app/GasAlert";
+			};
+			name = Release;
+		};
+		70523CA623A8CE4800A33198 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = C4F9F575BEFF22EAC5A0ED14 /* Pods-GasAlertUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TL9BB86JQV;
+				INFOPLIST_FILE = GasAlertUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gasalertdev.GasAlertUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GasAlert;
+			};
+			name = Debug;
+		};
+		70523CA723A8CE4800A33198 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0860C58692D5A58138AF00AA /* Pods-GasAlertUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = TL9BB86JQV;
+				INFOPLIST_FILE = GasAlertUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = gasalertdev.GasAlertUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = GasAlert;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		70523C7023A8CE4300A33198 /* Build configuration list for PBXProject "GasAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70523C9D23A8CE4800A33198 /* Debug */,
+				70523C9E23A8CE4800A33198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70523C9F23A8CE4800A33198 /* Build configuration list for PBXNativeTarget "GasAlert" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70523CA023A8CE4800A33198 /* Debug */,
+				70523CA123A8CE4800A33198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70523CA223A8CE4800A33198 /* Build configuration list for PBXNativeTarget "GasAlertTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70523CA323A8CE4800A33198 /* Debug */,
+				70523CA423A8CE4800A33198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		70523CA523A8CE4800A33198 /* Build configuration list for PBXNativeTarget "GasAlertUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				70523CA623A8CE4800A33198 /* Debug */,
+				70523CA723A8CE4800A33198 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 70523C6D23A8CE4300A33198 /* Project object */;
+}

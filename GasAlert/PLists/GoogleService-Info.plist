@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>687837978793-7so5e4btmiph71jk167kbsrrh2a4ujqm.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.687837978793-7so5e4btmiph71jk167kbsrrh2a4ujqm</string>
+	<key>API_KEY</key>
+	<string>AIzaSyB5DHA1KPPL8M-Ny3tvF9SNffNzgLZDQv8</string>
+	<key>GCM_SENDER_ID</key>
+	<string>687837978793</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>gasalertdev.GasAlert</string>
+	<key>PROJECT_ID</key>
+	<string>gasalert-720ca</string>
+	<key>STORAGE_BUCKET</key>
+	<string>gasalert-720ca.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:687837978793:ios:747dd85316921d3a5089b8</string>
+	<key>DATABASE_URL</key>
+	<string>https://gasalert-720ca.firebaseio.com</string>
+</dict>
+</plist>

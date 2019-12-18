@@ -1,0 +1,6 @@
+framework module Pods_GasAlertUITests {
+  umbrella header "Pods-GasAlertUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
