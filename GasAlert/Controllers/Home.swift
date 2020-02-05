@@ -64,6 +64,13 @@ class Home: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionVi
         self.navigationController!.navigationBar.barTintColor = UIColor(red:0.86, green:0.44, blue:0.24, alpha:1.0)
         
     }
+    @IBAction func signout(_ sender: Any) {
+        try! Server.auth.sharedRef.signOut()
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let controller = storyboard.instantiateViewController(withIdentifier: "signIn")
+        
+        self.present(controller, animated: true, completion: nil)
+    }
     
     @objc func loadData() {
         // do nothing

@@ -91,7 +91,7 @@ class Map: UIViewController {
     func addPins() {
         // Creates a marker in the center of the map.
         for deal in self.deals ?? [String]() {
-            var dealProper = Deal(dealID: deal, parentMap: self)
+            var dealProper = Deal(dealID: deal, parentMap: self, completion: {})
         }
         
     }

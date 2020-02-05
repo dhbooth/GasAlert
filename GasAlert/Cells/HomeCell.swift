@@ -49,24 +49,31 @@ class HomeCell: UICollectionViewCell, UICollectionViewDataSource, UICollectionVi
     
     @IBAction func gasButton(_ sender: Any) {
         if pressed {
-            self.gasButton.setImage(#imageLiteral(resourceName: "unfire"), for: .normal)
-            let num = Int(self.numLikes.text!)! - 1
-            self.numLikes.text = String(num)
-            self.numLikes.textColor = UIColor(red:0.55, green:0.47, blue:0.37, alpha:1.0)
+            Server.database.sharedRef.child(self.myDeal!.id!).child("likes").child(Server.auth.currentLocalUser!.id!).removeValue()
         }
         else {
-            self.gasButton.setImage(#imageLiteral(resourceName: "fire"), for: .normal)
-            let num = Int(self.numLikes.text!)! + 1
-            self.numLikes.text = String(num)
-            self.numLikes.textColor = UIColor(red:0.86, green:0.44, blue:0.24, alpha:1.0)
+            Server.database.sharedRef.child(self.myDeal!.id!).child("likes").child(Server.auth.currentLocalUser!.id!).setValue("liked")
         }
         self.pressed = !self.pressed
         
     }
     
     func fullInit(_ dealID: String) {
-        self.myDeal = Deal(dealID: dealID, parent: self)
+        self.myDeal = Deal(dealID: dealID, parent: self, completion: {
+            
+        })
         self.numLikes.text = String(Int.random(in: 0..<98))
+    }
+    
+    func loadLikes() {
+        if self.myDeal!.myLikes?.contains(Server.auth.currentLocalUser!.id!) ?? false {
+            self.numLikes.textColor = UIColor(red:0.86, green:0.44, blue:0.24, alpha:1.0)
+            self.gasButton.setImage(#imageLiteral(resourceName: "fire"), for: .normal)
+        }
+        else {
+            self.numLikes.textColor = UIColor(red:0.55, green:0.47, blue:0.37, alpha:1.0)
+            self.gasButton.setImage(#imageLiteral(resourceName: "unfire"), for: .normal)
+        }
     }
 
 }

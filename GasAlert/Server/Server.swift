@@ -55,5 +55,7 @@ class Server {
         private init() {}
         
         static var sharedRef = Auth.auth()
+        static var sharedCurrentUser = Auth.auth().currentUser
+        static var currentLocalUser: User?
     }
 }

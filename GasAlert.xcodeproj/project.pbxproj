@@ -17,6 +17,11 @@
 		70523C8523A8CE4800A33198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70523C8323A8CE4800A33198 /* LaunchScreen.storyboard */; };
 		70523C9023A8CE4800A33198 /* GasAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70523C8F23A8CE4800A33198 /* GasAlertTests.swift */; };
 		70523C9B23A8CE4800A33198 /* GasAlertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70523C9A23A8CE4800A33198 /* GasAlertUITests.swift */; };
+		7085A3BB23EA96530053C477 /* SyntheticLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085A3BA23EA96530053C477 /* SyntheticLaunch.swift */; };
+		7085A3BD23EA96610053C477 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085A3BC23EA96610053C477 /* Login.swift */; };
+		7085A3BF23EA96780053C477 /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085A3BE23EA96780053C477 /* Signup.swift */; };
+		7085A3C123EA99D40053C477 /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085A3C023EA99D40053C477 /* Style.swift */; };
+		7085A3C423EAA1350053C477 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085A3C323EAA1350053C477 /* User.swift */; };
 		70B16C5C23A8D1DE000CE6EE /* Restaurant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B16C5B23A8D1DE000CE6EE /* Restaurant.swift */; };
 		70B16C5E23A8D1E9000CE6EE /* Deal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B16C5D23A8D1E9000CE6EE /* Deal.swift */; };
 		70B16C6123A8D37F000CE6EE /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70B16C6023A8D37F000CE6EE /* Server.swift */; };
@@ -67,6 +72,11 @@
 		70523C9623A8CE4800A33198 /* GasAlertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasAlertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70523C9A23A8CE4800A33198 /* GasAlertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasAlertUITests.swift; sourceTree = "<group>"; };
 		70523C9C23A8CE4800A33198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7085A3BA23EA96530053C477 /* SyntheticLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntheticLaunch.swift; sourceTree = "<group>"; };
+		7085A3BC23EA96610053C477 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
+		7085A3BE23EA96780053C477 /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
+		7085A3C023EA99D40053C477 /* Style.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		7085A3C323EAA1350053C477 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		70B16C5B23A8D1DE000CE6EE /* Restaurant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Restaurant.swift; sourceTree = "<group>"; };
 		70B16C5D23A8D1E9000CE6EE /* Deal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deal.swift; sourceTree = "<group>"; };
 		70B16C6023A8D37F000CE6EE /* Server.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Server.swift; sourceTree = "<group>"; };
@@ -170,11 +180,23 @@
 			path = GasAlertUITests;
 			sourceTree = "<group>";
 		};
+		7085A3B923EA962A0053C477 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				7085A3BC23EA96610053C477 /* Login.swift */,
+				7085A3BE23EA96780053C477 /* Signup.swift */,
+				7085A3BA23EA96530053C477 /* SyntheticLaunch.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
 		70B16C5A23A8D110000CE6EE /* Model */ = {
 			isa = PBXGroup;
 			children = (
 				70B16C5B23A8D1DE000CE6EE /* Restaurant.swift */,
 				70B16C5D23A8D1E9000CE6EE /* Deal.swift */,
+				7085A3C023EA99D40053C477 /* Style.swift */,
+				7085A3C323EAA1350053C477 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -190,6 +212,7 @@
 		70B16C6423A8DB06000CE6EE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7085A3B923EA962A0053C477 /* Auth */,
 				70B16C6A23A8DC56000CE6EE /* Home.swift */,
 				70B16C7523A9FEC6000CE6EE /* Map.swift */,
 				70F8D99823AA26D200983545 /* PopupView.swift */,
@@ -501,8 +524,13 @@
 				70B16C5C23A8D1DE000CE6EE /* Restaurant.swift in Sources */,
 				70B16C6F23A8DEFE000CE6EE /* HomeCell.swift in Sources */,
 				70B16C5E23A8D1E9000CE6EE /* Deal.swift in Sources */,
+				7085A3BD23EA96610053C477 /* Login.swift in Sources */,
 				70F8D99923AA26D200983545 /* PopupView.swift in Sources */,
+				7085A3C123EA99D40053C477 /* Style.swift in Sources */,
+				7085A3BB23EA96530053C477 /* SyntheticLaunch.swift in Sources */,
 				70B16C7323A8E844000CE6EE /* StarCell.swift in Sources */,
+				7085A3C423EAA1350053C477 /* User.swift in Sources */,
+				7085A3BF23EA96780053C477 /* Signup.swift in Sources */,
 				70523C7923A8CE4300A33198 /* AppDelegate.swift in Sources */,
 				70B16C6123A8D37F000CE6EE /* Server.swift in Sources */,
 				70B16C6B23A8DC56000CE6EE /* Home.swift in Sources */,

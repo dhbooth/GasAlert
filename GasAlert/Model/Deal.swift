@@ -13,14 +13,17 @@ import GoogleMaps
 
 class Deal {
     
+    var id: String?
     var name: String?
     var discount: Float?
     var restaurantOfferedBy: Restaurant?
     var startDate: String?
     var endDate: String?
     var parent: HomeCell?
+    var myLikes: [String]?
     
-    init(dealID: String, parent: HomeCell? = nil, parentMap: Map? = nil)  {
+    init(dealID: String, parent: HomeCell? = nil, parentMap: Map? = nil, completion:@escaping () -> Void)  {
+        self.id = dealID
         Server.database.sharedRef.child("Deals").child(dealID).observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? [String:Any] ?? [String:Any]()
             
@@ -29,6 +32,7 @@ class Deal {
             self.discount = value["discount"] as? Float ?? 0.0
             self.startDate = value["startDate"] as? String ?? ""
             self.endDate = value["endDate"] as? String ?? ""
+            self.myLikes = Array((value["likes"] as? [String : String] ?? [String : String]()).keys)
             
             let df = DateFormatter()
             df.dateFormat = "yyyy-MM-dd HH:mm:ss Z"
@@ -49,6 +53,10 @@ class Deal {
                     parent?.nameLabel.text = (self.restaurantOfferedBy?.name ?? "") + " • " + (self.name ?? "")
                     parent?.ratingCollection.reloadData()
                     Server.fileStore.getDownloadURLAndDownloadAndCache(Server.fileStore.sharedRef.child("RestPics").child(self.restaurantOfferedBy!.name! + ".jpg"), imageView: self.parent?.imageView)
+                    completion()
+                }
+                else {
+                    completion()
                 }
             })
             

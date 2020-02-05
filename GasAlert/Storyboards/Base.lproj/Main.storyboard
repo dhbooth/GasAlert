@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="H7p-TF-Kqd">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="WOP-bi-2At">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15703"/>
@@ -13,12 +13,12 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="Home" customModule="GasAlert" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="hdF-bX-5hN">
-                                <rect key="frame" x="0.0" y="2.5" width="414" height="896"/>
-                                <color key="backgroundColor" red="0.86044770077720201" green="0.72169950449286291" blue="0.55640600467997836" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <rect key="frame" x="0.0" y="-13.5" width="414" height="842"/>
+                                <color key="backgroundColor" red="0.85882352941176465" green="0.72156862745098038" blue="0.55686274509803924" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="s56-uo-tq4">
                                     <size key="itemSize" width="371" height="217"/>
                                     <size key="headerReferenceSize" width="0.0" height="50"/>
@@ -65,16 +65,287 @@
                                     <color key="value" red="0.49411764705882355" green="0.22745098039215686" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </userDefinedRuntimeAttribute>
                             </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="signout:" destination="BYZ-38-t0r" id="4Vz-zM-9g2"/>
+                            </connections>
                         </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="collectionView" destination="hdF-bX-5hN" id="puh-hF-BbG"/>
                         <segue destination="idd-91-4FC" kind="presentation" identifier="toDetail" id="ZyM-Hw-80X"/>
+                        <segue destination="lvV-My-JE4" kind="show" identifier="toLogin" id="ifQ-qk-WwW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1957.9710144927537" y="90.401785714285708"/>
+        </scene>
+        <!--Synthetic Launch-->
+        <scene sceneID="ELF-LI-v9j">
+            <objects>
+                <viewController id="WOP-bi-2At" customClass="SyntheticLaunch" customModule="GasAlert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="aRh-GP-RGH">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GasAlert" translatesAutoresizingMaskIntoConstraints="NO" id="x10-YO-Br0">
+                                <rect key="frame" x="62" y="308" width="290" height="290"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="x10-YO-Br0" secondAttribute="height" multiplier="1:1" id="CUc-jv-iX2"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="x10-YO-Br0" firstAttribute="centerY" secondItem="u4X-WA-pi6" secondAttribute="centerY" id="1X5-zd-htw"/>
+                            <constraint firstItem="x10-YO-Br0" firstAttribute="centerX" secondItem="u4X-WA-pi6" secondAttribute="centerX" id="V2d-gR-zHF"/>
+                            <constraint firstItem="x10-YO-Br0" firstAttribute="width" secondItem="aRh-GP-RGH" secondAttribute="width" multiplier="0.7" id="rcJ-aB-ag6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="u4X-WA-pi6"/>
+                    </view>
+                    <connections>
+                        <segue destination="lvV-My-JE4" kind="show" identifier="toLogin" id="2e4-2k-XT0"/>
+                        <segue destination="H7p-TF-Kqd" kind="show" identifier="toHome" id="GYj-ZA-jVU"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iVN-WQ-UqI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1659.4202898550725" y="-577.23214285714278"/>
+        </scene>
+        <!--Login-->
+        <scene sceneID="eHV-qD-ee4">
+            <objects>
+                <viewController storyboardIdentifier="signIn" modalPresentationStyle="fullScreen" id="lvV-My-JE4" customClass="Login" customModule="GasAlert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jW3-Pp-RST">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GasAlert" translatesAutoresizingMaskIntoConstraints="NO" id="m4h-9K-d0u">
+                                <rect key="frame" x="103.5" y="64" width="207" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="m4h-9K-d0u" secondAttribute="height" multiplier="1:1" id="2xh-Aq-Stg"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="j3X-MF-vE8">
+                                <rect key="frame" x="20.5" y="281" width="373" height="571"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign in" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="f6M-mr-cji">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="32"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="24"/>
+                                        <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rgn-Ho-b5i">
+                                        <rect key="frame" x="0.0" y="48" width="373" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="HmZ-mW-aCv"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wtq-Bl-3QR">
+                                        <rect key="frame" x="0.0" y="64" width="373" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="AWg-wb-fZW"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bcw-Pm-d51">
+                                        <rect key="frame" x="0.0" y="120" width="373" height="40"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O0N-1C-5yc">
+                                        <rect key="frame" x="0.0" y="176" width="373" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="Nfr-b1-yBV"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="12"/>
+                                        <state key="normal" title="Forgot Password">
+                                            <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="forgotPassword:" destination="lvV-My-JE4" eventType="touchUpInside" id="Aw7-we-Iar"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ooh-Ua-9hn">
+                                        <rect key="frame" x="0.0" y="212" width="373" height="25"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="6vF-sG-X5P"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NHL-MI-OhM">
+                                        <rect key="frame" x="0.0" y="253" width="373" height="40"/>
+                                        <color key="backgroundColor" red="0.89803921568627454" green="0.52156862745098043" blue="0.31372549019607843" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="cXZ-0N-HAm"/>
+                                        </constraints>
+                                        <state key="normal" title="Log In">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="login:" destination="lvV-My-JE4" eventType="touchUpInside" id="sGi-Xu-vUs"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bag-73-vF2">
+                                        <rect key="frame" x="0.0" y="309" width="373" height="226"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hf2-03-3k2">
+                                        <rect key="frame" x="0.0" y="551" width="373" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="KLR-22-g5I"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="12"/>
+                                        <state key="normal" title="Create Account">
+                                            <color key="titleColor" red="0.8980392157" green="0.52156862749999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="createAccount:" destination="lvV-My-JE4" eventType="touchUpInside" id="es7-qj-EO5"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="bcw-Pm-d51" firstAttribute="height" secondItem="Wtq-Bl-3QR" secondAttribute="height" id="F3E-gx-R7X"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="j3X-MF-vE8" firstAttribute="width" secondItem="jW3-Pp-RST" secondAttribute="width" multiplier="0.9" id="4fL-b4-JTM"/>
+                            <constraint firstItem="6NZ-ly-DTa" firstAttribute="bottom" secondItem="j3X-MF-vE8" secondAttribute="bottom" constant="10" id="5LT-tS-YZ6"/>
+                            <constraint firstItem="m4h-9K-d0u" firstAttribute="width" secondItem="jW3-Pp-RST" secondAttribute="width" multiplier="0.5" id="Kgv-g2-DJC"/>
+                            <constraint firstItem="j3X-MF-vE8" firstAttribute="centerX" secondItem="6NZ-ly-DTa" secondAttribute="centerX" id="LNI-1e-RGK"/>
+                            <constraint firstItem="j3X-MF-vE8" firstAttribute="top" secondItem="m4h-9K-d0u" secondAttribute="bottom" constant="10" id="eLc-Ot-UpC"/>
+                            <constraint firstItem="m4h-9K-d0u" firstAttribute="top" secondItem="6NZ-ly-DTa" secondAttribute="top" constant="20" id="guv-iu-2p8"/>
+                            <constraint firstItem="m4h-9K-d0u" firstAttribute="centerX" secondItem="6NZ-ly-DTa" secondAttribute="centerX" id="vw0-hA-lu0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6NZ-ly-DTa"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="VR6-TA-Gse"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="Wtq-Bl-3QR" id="vq4-7i-UqW"/>
+                        <outlet property="loginButton" destination="NHL-MI-OhM" id="CWD-wz-NeA"/>
+                        <outlet property="passwordTextField" destination="bcw-Pm-d51" id="n5l-Pd-lJf"/>
+                        <segue destination="Rl2-Wd-UwZ" kind="show" identifier="toSignup" id="y5t-x1-0lU"/>
+                        <segue destination="H7p-TF-Kqd" kind="show" identifier="toHome" id="QDN-7A-XPM"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KiJ-JU-fKA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-755" y="-577"/>
+        </scene>
+        <!--Signup-->
+        <scene sceneID="7VT-B3-bzO">
+            <objects>
+                <viewController id="Rl2-Wd-UwZ" customClass="Signup" customModule="GasAlert" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="o8h-78-J8Z">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="GasAlert" translatesAutoresizingMaskIntoConstraints="NO" id="q1f-De-1Vs">
+                                <rect key="frame" x="103.5" y="20" width="207" height="207"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="q1f-De-1Vs" secondAttribute="height" multiplier="1:1" id="wCb-ye-9NL"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="gvI-Gt-6wF">
+                                <rect key="frame" x="20.5" y="237" width="373" height="561"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign up" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UF3-RS-klh">
+                                        <rect key="frame" x="0.0" y="0.0" width="373" height="32"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="24"/>
+                                        <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TgM-pi-XtC">
+                                        <rect key="frame" x="0.0" y="48" width="373" height="0.0"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" id="g6V-EA-Ckf"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="email address" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gUj-Fb-EE8">
+                                        <rect key="frame" x="0.0" y="64" width="373" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="E8g-GS-XL0"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" textContentType="email"/>
+                                    </textField>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jhC-gk-0aQ">
+                                        <rect key="frame" x="0.0" y="120" width="373" height="40"/>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS" family="Euphemia UCAS" pointSize="17"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES" textContentType="password"/>
+                                    </textField>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Q5x-PF-Skt">
+                                        <rect key="frame" x="0.0" y="176" width="373" height="25"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="25" id="1Wy-2h-U0Q"/>
+                                        </constraints>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mxU-jP-hB9">
+                                        <rect key="frame" x="0.0" y="217" width="373" height="40"/>
+                                        <color key="backgroundColor" red="0.8980392157" green="0.52156862749999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="fGq-Wz-3JO"/>
+                                        </constraints>
+                                        <state key="normal" title="Sign up">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="signUpButton:" destination="Rl2-Wd-UwZ" eventType="touchUpInside" id="qhg-fc-yrq"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tZg-oO-hIx">
+                                        <rect key="frame" x="0.0" y="273" width="373" height="252"/>
+                                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                    </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Fx9-1o-0QI">
+                                        <rect key="frame" x="0.0" y="541" width="373" height="20"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="20" id="epb-S6-QEw"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="EuphemiaUCAS-Bold" family="Euphemia UCAS" pointSize="12"/>
+                                        <state key="normal" title="Login">
+                                            <color key="titleColor" red="0.8980392157" green="0.52156862749999999" blue="0.31372549020000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="loginButton:" destination="Rl2-Wd-UwZ" eventType="touchUpInside" id="6tf-0v-BXb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="jhC-gk-0aQ" firstAttribute="height" secondItem="gUj-Fb-EE8" secondAttribute="height" id="3A7-Kw-uDt"/>
+                                </constraints>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="q1f-De-1Vs" firstAttribute="width" secondItem="o8h-78-J8Z" secondAttribute="width" multiplier="0.5" id="4yc-jz-CY9"/>
+                            <constraint firstItem="q1f-De-1Vs" firstAttribute="centerX" secondItem="fAG-wU-3xL" secondAttribute="centerX" id="TBz-Oj-8FK"/>
+                            <constraint firstItem="fAG-wU-3xL" firstAttribute="bottom" secondItem="gvI-Gt-6wF" secondAttribute="bottom" constant="10" id="WQq-pm-KyB"/>
+                            <constraint firstItem="gvI-Gt-6wF" firstAttribute="width" secondItem="o8h-78-J8Z" secondAttribute="width" multiplier="0.9" id="ek4-D0-8Qc"/>
+                            <constraint firstItem="gvI-Gt-6wF" firstAttribute="top" secondItem="q1f-De-1Vs" secondAttribute="bottom" constant="10" id="lbo-7a-cEN"/>
+                            <constraint firstItem="gvI-Gt-6wF" firstAttribute="centerX" secondItem="fAG-wU-3xL" secondAttribute="centerX" id="pom-7u-0Xd"/>
+                            <constraint firstItem="q1f-De-1Vs" firstAttribute="top" secondItem="fAG-wU-3xL" secondAttribute="top" constant="20" id="uBX-zY-Myz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="fAG-wU-3xL"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="NPa-eF-ZI0"/>
+                    <connections>
+                        <outlet property="emailTextField" destination="gUj-Fb-EE8" id="jQa-JX-O0V"/>
+                        <outlet property="passwordTextField" destination="jhC-gk-0aQ" id="cls-ag-i5U"/>
+                        <outlet property="signupButton" destination="mxU-jP-hB9" id="tch-8L-KG0"/>
+                        <segue destination="lvV-My-JE4" kind="show" identifier="toSignin" id="eEB-oP-fYp"/>
+                        <segue destination="H7p-TF-Kqd" kind="show" identifier="toHome" id="OhF-X3-hUL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zCN-vY-OTK" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-755" y="-1259"/>
         </scene>
         <!--Popup View-->
         <scene sceneID="rN1-c2-hFb">
@@ -233,11 +504,11 @@
         <!--Navigation Controller-->
         <scene sceneID="izq-td-GH4">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="IAF-iO-9sK" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="IAF-iO-9sK" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="Home copy 2" selectedImage="homeFilled" id="K4V-bM-OB0"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bz5-t5-Ia2">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -254,11 +525,11 @@
             <objects>
                 <viewController id="UYR-MA-e36" customClass="Map" customModule="GasAlert" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="KXH-HY-3p8">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jLm-Yd-9fY" customClass="GMSMapView">
-                                <rect key="frame" x="0.0" y="2.5" width="414" height="896"/>
+                                <rect key="frame" x="0.0" y="-13.5" width="414" height="842"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                             </view>
                         </subviews>
@@ -283,8 +554,9 @@
         <!--Tab Bar Controller-->
         <scene sceneID="65S-df-iso">
             <objects>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="H7p-TF-Kqd" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="H7p-TF-Kqd" sceneMemberID="viewController">
                     <toolbarItems/>
+                    <navigationItem key="navigationItem" id="1Vw-BJ-5Mt"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="pi8-iB-WnW">
                         <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -311,11 +583,11 @@
         <!--Navigation Controller-->
         <scene sceneID="RYh-J2-OxQ">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="wzb-2z-y1O" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" modalPresentationStyle="fullScreen" id="wzb-2z-y1O" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="" image="placeholder (1)" selectedImage="placeholder (2)" id="xTF-Mi-Wfw"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Kxc-mz-PKq">
-                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
@@ -330,6 +602,7 @@
     </scenes>
     <resources>
         <image name="Buffalo Wild Wings" width="678" height="381"/>
+        <image name="GasAlert" width="947" height="703"/>
         <image name="Home copy 2" width="24" height="24"/>
         <image name="blackberry-qr-code-variant" width="256" height="256"/>
         <image name="fire" width="64" height="64"/>
@@ -340,4 +613,8 @@
         <image name="placeholder (2)" width="24" height="24"/>
         <image name="unfire" width="64" height="64"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="OhF-X3-hUL"/>
+        <segue reference="eEB-oP-fYp"/>
+    </inferredMetricsTieBreakers>
 </document>
