@@ -18,9 +18,11 @@ class Restaurant {
     var deals: [String]?
     var user_rating: Double?
     var price_rating: Int?
+    var id: String?
     
     
     init(restID: String, completion:@escaping () -> Void)  {
+        self.id = restID
         Server.database.sharedRef.child("Restaurants").child(restID).observeSingleEvent(of: .value) { (snapshot) in
             let value = snapshot.value as? [String : Any] ?? [String : Any]()
             

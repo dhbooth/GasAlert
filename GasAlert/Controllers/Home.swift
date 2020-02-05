@@ -78,6 +78,13 @@ class Home: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionVi
         self.collectionView!.refreshControl?.endRefreshing()
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        super.prepare(for: segue, sender: sender)
+        if segue.identifier == "toDetail" {
+            let dest = segue.destination as! PopupView
+            
+        }
+    }
 
 }
 
@@ -95,7 +102,10 @@ extension Home {
     //}
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        self.performSegue(withIdentifier: "toDetail", sender: self)
+        PopupView.myDeal = Deal(dealID: self.deals[indexPath.item], completion: {
+            self.performSegue(withIdentifier: "toDetail", sender: self)
+        })
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

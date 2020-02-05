@@ -30,6 +30,7 @@ class SyntheticLaunch: UIViewController {
             UIView.animate(withDuration: 1.0, animations: {
                 self.view.backgroundColor = Style.background_orange
             }) { (b) in
+                Server.auth.currentLocalUser = User(userID!)
                 self.performSegue(withIdentifier: "toHome", sender: self)
             }
             
