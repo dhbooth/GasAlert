@@ -17,6 +17,8 @@
 		70523C8523A8CE4800A33198 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 70523C8323A8CE4800A33198 /* LaunchScreen.storyboard */; };
 		70523C9023A8CE4800A33198 /* GasAlertTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70523C8F23A8CE4800A33198 /* GasAlertTests.swift */; };
 		70523C9B23A8CE4800A33198 /* GasAlertUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70523C9A23A8CE4800A33198 /* GasAlertUITests.swift */; };
+		7075F5FC244040160084A49E /* Rest_Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7075F5FB244040160084A49E /* Rest_Profile.swift */; };
+		7075F5FE24404E170084A49E /* CreateDeal.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7075F5FD24404E170084A49E /* CreateDeal.swift */; };
 		7085A3BB23EA96530053C477 /* SyntheticLaunch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085A3BA23EA96530053C477 /* SyntheticLaunch.swift */; };
 		7085A3BD23EA96610053C477 /* Login.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085A3BC23EA96610053C477 /* Login.swift */; };
 		7085A3BF23EA96780053C477 /* Signup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7085A3BE23EA96780053C477 /* Signup.swift */; };
@@ -72,6 +74,8 @@
 		70523C9623A8CE4800A33198 /* GasAlertUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GasAlertUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		70523C9A23A8CE4800A33198 /* GasAlertUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GasAlertUITests.swift; sourceTree = "<group>"; };
 		70523C9C23A8CE4800A33198 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7075F5FB244040160084A49E /* Rest_Profile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rest_Profile.swift; sourceTree = "<group>"; };
+		7075F5FD24404E170084A49E /* CreateDeal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateDeal.swift; sourceTree = "<group>"; };
 		7085A3BA23EA96530053C477 /* SyntheticLaunch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyntheticLaunch.swift; sourceTree = "<group>"; };
 		7085A3BC23EA96610053C477 /* Login.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Login.swift; sourceTree = "<group>"; };
 		7085A3BE23EA96780053C477 /* Signup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Signup.swift; sourceTree = "<group>"; };
@@ -180,6 +184,15 @@
 			path = GasAlertUITests;
 			sourceTree = "<group>";
 		};
+		7075F5FA24403FDD0084A49E /* Rest */ = {
+			isa = PBXGroup;
+			children = (
+				7075F5FB244040160084A49E /* Rest_Profile.swift */,
+				7075F5FD24404E170084A49E /* CreateDeal.swift */,
+			);
+			path = Rest;
+			sourceTree = "<group>";
+		};
 		7085A3B923EA962A0053C477 /* Auth */ = {
 			isa = PBXGroup;
 			children = (
@@ -212,6 +225,7 @@
 		70B16C6423A8DB06000CE6EE /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7075F5FA24403FDD0084A49E /* Rest */,
 				7085A3B923EA962A0053C477 /* Auth */,
 				70B16C6A23A8DC56000CE6EE /* Home.swift */,
 				70B16C7523A9FEC6000CE6EE /* Map.swift */,
@@ -524,6 +538,7 @@
 				70B16C5C23A8D1DE000CE6EE /* Restaurant.swift in Sources */,
 				70B16C6F23A8DEFE000CE6EE /* HomeCell.swift in Sources */,
 				70B16C5E23A8D1E9000CE6EE /* Deal.swift in Sources */,
+				7075F5FE24404E170084A49E /* CreateDeal.swift in Sources */,
 				7085A3BD23EA96610053C477 /* Login.swift in Sources */,
 				70F8D99923AA26D200983545 /* PopupView.swift in Sources */,
 				7085A3C123EA99D40053C477 /* Style.swift in Sources */,
@@ -532,6 +547,7 @@
 				7085A3C423EAA1350053C477 /* User.swift in Sources */,
 				7085A3BF23EA96780053C477 /* Signup.swift in Sources */,
 				70523C7923A8CE4300A33198 /* AppDelegate.swift in Sources */,
+				7075F5FC244040160084A49E /* Rest_Profile.swift in Sources */,
 				70B16C6123A8D37F000CE6EE /* Server.swift in Sources */,
 				70B16C6B23A8DC56000CE6EE /* Home.swift in Sources */,
 				70B16C7623A9FEC6000CE6EE /* Map.swift in Sources */,

@@ -37,6 +37,7 @@ class Deal {
             self.startDate = value["startDate"] as? String ?? ""
             self.endDate = value["endDate"] as? String ?? ""
             self.myLikes = Array((value["likes"] as? [String : String] ?? [String : String]()).keys)
+            self.addLikesObserver()
             self.myUsers = Array((value["users"] as? [String : String] ?? [String : String]()).keys)
             
             let df = DateFormatter()
@@ -65,6 +66,14 @@ class Deal {
             })
             
         }
+    }
+    
+    func addLikesObserver() {
+        self.myRef?.child("likes").observe(.value, with: { (snapshot) in
+            let value = snapshot.value as? [String : String] ?? [String : String]()
+            self.myLikes = Array(value.keys)
+        })
+        
     }
     
     func removeObserver() {

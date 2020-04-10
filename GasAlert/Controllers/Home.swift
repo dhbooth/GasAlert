@@ -20,6 +20,7 @@ class Home: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionVi
     }
     
     var refresher:UIRefreshControl!
+    static var isRest = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -38,7 +39,16 @@ class Home: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionVi
         imageView.contentMode = .scaleAspectFit
         self.navigationItem.titleView = imageView
         
-        self.collectionView.backgroundColor = UIColor.orange.withAlphaComponent(0.3)
+        // Permissions.
+        if (Server.auth.currentLocalUser?.isRestaurant ?? false) || Home.isRest {
+            self.navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem(image: UIImage(systemName: "plus"), style: UIBarButtonItem.Style.plain, target: self, action: #selector(createDeal))
+            self.navigationController?.navigationBar.topItem?.rightBarButtonItem?.tintColor = Style.background_orange
+        }
+        else {
+            self.navigationController?.navigationBar.topItem?.rightBarButtonItem = UIBarButtonItem()
+        }
+        
+        self.collectionView.backgroundColor = UIColor.white
         
         
         self.layout = UICollectionViewFlowLayout()
@@ -55,15 +65,39 @@ class Home: UIViewController, UICollectionViewDelegateFlowLayout, UICollectionVi
         self.collectionView.collectionViewLayout = layout!
         
         // Fetch deals
-        Server.database.sharedRef.child("Deals").observeSingleEvent(of: .value) { (snapshot) in
-            let value = snapshot.value as? [String : Any] ?? [String : Any]()
-            self.deals = Array(value.keys)
+        if (Server.auth.currentLocalUser?.isRestaurant ?? false) || Home.isRest {    // For Restaurant.
+            Server.database.sharedRef.child("Restaurants").child(Server.auth.currentLocalUser!.id!).child("deals").observe(.value, with: { (snapshot) in
+                let value = snapshot.value as? [String : Any] ?? [String : Any]()
+                self.deals = Array(value.keys)
+            })
+        }
+        else {      // For User.
+            Server.database.sharedRef.child("Deals").observeSingleEvent(of: .value) { (snapshot) in
+                let value = snapshot.value as? [String : Any] ?? [String : Any]()
+                var temp = Array(value.keys)
+                temp.sort { (deal1, deal2) -> Bool in
+                    let s1 = (value[deal1] as! [String : Any])["startDate"] as! String
+                    let s2 = (value[deal2] as! [String : Any])["startDate"] as! String
+                    return s1 < s2
+                }
+                self.deals = temp
+                
+            }
         }
         
-        self.tabBarController!.tabBar.barTintColor = UIColor(red:0.86, green:0.44, blue:0.24, alpha:1.0)
-        self.navigationController!.navigationBar.barTintColor = UIColor(red:0.86, green:0.44, blue:0.24, alpha:1.0)
+        // Orangify.
+    
+        // self.tabBarController!.tabBar.barTintColor = UIColor(red:0.86, green:0.44, blue:0.24, alpha:1.0)
+        // self.navigationController!.navigationBar.barTintColor = UIColor(red:0.86, green:0.44, blue:0.24, alpha:1.0)
         
     }
+    
+    @objc func createDeal() {
+        self.performSegue(withIdentifier: "toCreateDeal", sender: self)
+    }
+    
+    
+    
     @IBAction func signout(_ sender: Any) {
         try! Server.auth.sharedRef.signOut()
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -114,7 +148,7 @@ extension Home {
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = self.collectionView.dequeueReusableCell(withReuseIdentifier: "HomeCell", for: indexPath) as! HomeCell
-        cell.fullInit(self.deals[indexPath.item])
+        cell.fullInit(self.deals[indexPath.item], homePage: self)
         
         return cell
         

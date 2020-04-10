@@ -14,11 +14,33 @@ class Signup: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var signupButton: UIButton!
+    @IBOutlet weak var restaurantOwnerButton: UIButton!
+    
+    var isRestaurantOwner = false
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.signupButton.layer.cornerRadius = 7
-
+        self.restaurantOwnerButton.layer.cornerRadius = 7
+        self.restaurantOwnerButton.layer.borderColor = UIColor.lightGray.cgColor
+        self.restaurantOwnerButton.layer.borderWidth = 1
+    }
+    
+    @IBAction func restaurantOwnerButton(_ sender: Any) {
+        // Aes.
+        if self.isRestaurantOwner {
+            self.restaurantOwnerButton.layer.borderColor = UIColor.lightGray.cgColor
+            self.restaurantOwnerButton.setTitleColor(UIColor.lightGray, for: .normal)
+        }
+        else {
+            self.restaurantOwnerButton.layer.borderColor = Style.trademark_orange.cgColor
+            self.restaurantOwnerButton.setTitleColor(Style.trademark_orange, for: .normal)
+        }
+        
+        // State.
+        self.isRestaurantOwner = !self.isRestaurantOwner
+        
     }
     
     @IBAction func signUpButton(_ sender: Any) {
@@ -34,10 +56,18 @@ class Signup: UIViewController {
                    
                    // Add to DB.
                     Server.database.sharedRef.child("Users").child(auth!.user.uid).child("email").setValue(auth!.user.email!)
-                    self.performSegue(withIdentifier: "toHome", sender: self)
+                   
+                    if self.isRestaurantOwner {
+                        Server.database.sharedRef.child("Users").child(auth!.user.uid).child("entityType").setValue("Restaurant")
+                        self.performSegue(withIdentifier: "toRestaurantHome", sender: self)
+                    }
+                    else {
+                        Server.database.sharedRef.child("Users").child(auth!.user.uid).child("entityType").setValue("Customer")
+                        self.performSegue(withIdentifier: "toHome", sender: self)
+                    }
+                    
                 }
                 else {
-                    print("this")
                     self.presentFailureAlert()
                 }
             }

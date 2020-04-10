@@ -13,6 +13,7 @@ class User {
     var id : String?
     var email: String?
     var dealsRedeemed: [String]?
+    var isRestaurant: Bool?
 
     init(_ userID : String) {
         self.id = userID
@@ -20,6 +21,7 @@ class User {
             let value = snapshot.value as? [String : Any] ?? [String : Any]()
             self.email = value["email"] as? String ?? ""
             self.dealsRedeemed = value["deals"] as? [String] ?? [String]()
+            self.isRestaurant = (value["entityType"] as? String ?? "") == "Restaurant"
         }
     }
 }

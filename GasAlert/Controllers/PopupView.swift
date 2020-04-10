@@ -14,13 +14,9 @@ class PopupView: UIViewController {
     
     @IBOutlet weak var dealLabel: UILabel!
     @IBOutlet weak var restaurantLabel: UILabel!
-    @IBOutlet weak var gasRatingStack: UIStackView!
-    @IBOutlet weak var fire1: UIImageView!
-    @IBOutlet weak var fire2: UIImageView!
-    @IBOutlet weak var fire3: UIImageView!
-    @IBOutlet weak var fire4: UIImageView!
     @IBOutlet weak var priceRateGasLabel: UILabel!
     @IBOutlet weak var useDealButton: UIButton!
+    @IBOutlet weak var imageView: UIImageView!
     
     static var myDeal: Deal?
     
@@ -46,44 +42,49 @@ class PopupView: UIViewController {
         
         let price = PopupView.myDeal?.restaurantOfferedBy?.price_rating ?? 0
         var priceStr = ""
-        for i in 0..<price {
+        
+        // TODO:: Make this real!!
+        //for i in 0..<price {
+        for i in 0..<2 {
             priceStr += "$"
         }
         
+        // TODO:: Make this real!!
         let rate = PopupView.myDeal?.restaurantOfferedBy?.user_rating ?? 5.0
-        let rateStr = String(rate) + "/5"
+        let rateStr = "5/5"
+        //let rateStr = String(rate) + "/5"
         
         var gas = PopupView.myDeal?.myLikes?.count ?? 0
         let gasStr = String(gas)
         
         self.priceRateGasLabel.text = "Price: " + priceStr + "  |  " + "Rate: " + rateStr + "  |  " + "Gas: " + gasStr
+        Server.fileStore.getDownloadURLAndDownloadAndCache(Server.fileStore.sharedRef.child("Restaurants").child(PopupView.myDeal!.restaurantOfferedBy!.id!), imageView: self.imageView)
         
-        
-        // Gas rate.
-        if gas > 4 {
-            fire1.image = #imageLiteral(resourceName: "fireSmall")
-            fire2.image = #imageLiteral(resourceName: "fireSmall")
-            fire3.image = #imageLiteral(resourceName: "fireSmall")
-            fire4.image = #imageLiteral(resourceName: "fireSmall")
-        }
-        else if gas > 3 {
-            fire1.image = #imageLiteral(resourceName: "fireSmall")
-            fire2.image = #imageLiteral(resourceName: "fireSmall")
-            fire3.image = #imageLiteral(resourceName: "fireSmall")
-            fire4.image = #imageLiteral(resourceName: "unfire")
-        }
-        else if gas > 2 {
-            fire1.image = #imageLiteral(resourceName: "fireSmall")
-            fire2.image = #imageLiteral(resourceName: "fireSmall")
-            fire3.image = #imageLiteral(resourceName: "unfire")
-            fire4.image = #imageLiteral(resourceName: "unfire")
-        }
-        else {
-            fire1.image = #imageLiteral(resourceName: "fireSmall")
-            fire2.image = #imageLiteral(resourceName: "unfire")
-            fire3.image = #imageLiteral(resourceName: "unfire")
-            fire4.image = #imageLiteral(resourceName: "unfire")
-        }
+//        // Gas rate.
+//        if gas > 4 {
+//            fire1.image = #imageLiteral(resourceName: "fireSmall")
+//            fire2.image = #imageLiteral(resourceName: "fireSmall")
+//            fire3.image = #imageLiteral(resourceName: "fireSmall")
+//            fire4.image = #imageLiteral(resourceName: "fireSmall")
+//        }
+//        else if gas > 3 {
+//            fire1.image = #imageLiteral(resourceName: "fireSmall")
+//            fire2.image = #imageLiteral(resourceName: "fireSmall")
+//            fire3.image = #imageLiteral(resourceName: "fireSmall")
+//            fire4.image = #imageLiteral(resourceName: "unfire")
+//        }
+//        else if gas > 2 {
+//            fire1.image = #imageLiteral(resourceName: "fireSmall")
+//            fire2.image = #imageLiteral(resourceName: "fireSmall")
+//            fire3.image = #imageLiteral(resourceName: "unfire")
+//            fire4.image = #imageLiteral(resourceName: "unfire")
+//        }
+//        else {
+//            fire1.image = #imageLiteral(resourceName: "fireSmall")
+//            fire2.image = #imageLiteral(resourceName: "unfire")
+//            fire3.image = #imageLiteral(resourceName: "unfire")
+//            fire4.image = #imageLiteral(resourceName: "unfire")
+//        }
         
     }
     
